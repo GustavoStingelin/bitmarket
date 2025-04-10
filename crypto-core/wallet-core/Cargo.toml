@@ -11,6 +11,10 @@ serde = { workspace = true }
 serde_json = { workspace = true }
 getrandom = { version = "0.2", features = ["js"] }
 rand = "0.8"
+base64 = "0.21.7"
+
+[dev-dependencies]
+hex = "0.4.3"
 
 [lib]
 crate-type = ["cdylib", "rlib"] 
