@@ -1,0 +1,16 @@
+[package]
+name = "wallet-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Use Bitcoin directly instead of BDK for WASM compatibility
+bitcoin = { version = "0.30.2", features = ["rand"] }
+wasm-bindgen = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+getrandom = { version = "0.2", features = ["js"] }
+rand = "0.8"
+
+[lib]
+crate-type = ["cdylib", "rlib"] 

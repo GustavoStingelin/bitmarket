@@ -1,0 +1,17 @@
+[package]
+name = "dlc-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Replace git dependencies with temporary placeholders to allow compilation
+# Original: dlc = { git = "https://github.com/discreetlogcontracts/dlc", package = "dlc" }
+# Original: dlc-manager = { git = "https://github.com/discreetlogcontracts/dlc" }
+# When ready to integrate with the real DLC library, uncomment those and remove the placeholders
+wasm-bindgen = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+getrandom = { version = "0.2", features = ["js"] }
+
+[lib]
+crate-type = ["cdylib", "rlib"] 

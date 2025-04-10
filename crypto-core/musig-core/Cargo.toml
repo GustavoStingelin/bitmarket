@@ -1,0 +1,15 @@
+[package]
+name = "musig-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+musig2 = "0.2.4"
+secp256k1-zkp = { version = "0.10.1", default-features = false, features = ["global-context"] }
+wasm-bindgen = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+getrandom = { version = "0.2", features = ["js"] }
+
+[lib]
+crate-type = ["cdylib", "rlib"] 
